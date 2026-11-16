@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101426"><title>NoteWise — Music Practice Studio</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <header class="topbar"><a class="brand" href="/">♪ NoteWise</a><span>A little practice, a lot of progress.</span></header>
+  <main>
+    <section class="intro"><p class="eyebrow">YOUR PERSONAL MUSIC STUDIO</p><h1>Make music make sense.</h1><p>Ask questions, explore the fundamentals, and build a steady practice habit—one note at a time.</p></section>
+    <section class="card tutor"><div class="row"><div><p class="eyebrow">THEORY · PRACTICE · CURIOSITY</p><h2>Ask your music tutor</h2></div><span class="status" id="mode">Ready</span></div>
+      <p class="muted">Ask about notes, scales, chords, rhythm, or anything you’re learning.</p>
+      <div id="chat" class="chat" aria-live="polite"><div class="bubble tutor">Hi! What are you working on today? Try “How do I build a major scale?”</div></div>
+      <form id="chat-form"><label class="sr-only" for="question">Your music question</label><input id="question" maxlength="2000" placeholder="Ask a music question…" required><button id="send">Ask ↗</button></form><small>Gemini is optional; demo lessons work without an API key.</small>
+    </section>
+    <section class="card"><div class="row"><div><p class="eyebrow">LEARN AT YOUR PACE</p><h2>Mini lessons</h2></div><small id="lesson-source">Built-in lessons</small></div><div id="lessons" class="lesson-grid">Loading lessons…</div></section>
+    <div class="grid">
+      <section class="card"><p class="eyebrow">SOUND CHECK</p><h2>Check a note</h2><p class="muted">Microphone audio is analyzed in your browser and is not uploaded.</p><div class="pitch"><strong id="pitch-note">—</strong><span id="pitch-frequency">Start when ready</span></div><div class="meter"><i id="meter"></i></div><p id="pitch-hint" class="muted">Hold a steady note near your microphone.</p><button id="mic" class="secondary" type="button">Enable microphone</button><small id="mic-error" class="error"></small></section>
+      <section class="card"><p class="eyebrow">QUICK PRACTICE</p><h2 id="quiz-title">Note-reading warm-up</h2><p id="quiz-question" class="muted">In treble clef, what note is on the bottom line of the staff?</p><div id="quiz-options" class="options"><button data-answer="C">C</button><button data-answer="E">E</button><button data-answer="G">G</button><button data-answer="F">F</button></div><p id="quiz-feedback" aria-live="polite" class="muted">Choose an answer to check yourself.</p><button id="next-quiz" class="link" type="button">Try another question ↗</button></section>
+    </div>
+    <footer>Learn at your own pace. The pitch checker is a practice aid, not a professional tuner.</footer>
+  </main><script src="/static/app.js" defer></script>
+</body>
+</html>
